@@ -13,5 +13,7 @@ WORKDIR /root
 RUN git clone https://github.com/val314159/raml-python
 WORKDIR /root/raml-python
 RUN npm install
+WORKDIR /root
+COPY app.py app.py
 EXPOSE 8080
 CMD python app.py
