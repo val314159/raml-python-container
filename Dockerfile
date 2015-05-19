@@ -1,6 +1,7 @@
 FROM ubuntu
 MAINTAINER Joel Ward <jmward@gmail.com>
-RUN apt-get -y -qq install python wget git bottle
+RUN apt-get -y update
+RUN apt-get -y -qq install python wget git python-bottle
 RUN cd /opt && \
   wget http://nodejs.org/dist/v0.10.28/node-v0.10.28-linux-x64.tar.gz && \
   tar -xvf node-v0.10.28-linux-x64.tar.gz && \
@@ -11,6 +12,6 @@ RUN cd /opt && \
 WORKDIR /root
 RUN git clone https://github.com/val314159/raml-python
 WORKDIR /root/raml-python
-EXPORT 8080
 RUN npm install
+EXPOSE 8080
 CMD python app.py
