@@ -10,10 +10,9 @@ RUN cd /opt && \
   ln -s /opt/node/bin/* . && \
   rm -fr /opt/node-v0.10.28-linux-x64.tar.gz
 WORKDIR /root
+RUN npm install raml-python -g
+#RUN apt-get -y -qq install emacs
 RUN git clone https://github.com/val314159/raml-python
-WORKDIR /root/raml-python
-RUN npm install
-WORKDIR /root
 COPY app.py app.py
 EXPOSE 8080
 CMD python app.py
