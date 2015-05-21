@@ -14,5 +14,6 @@ RUN npm install raml-python -g
 #RUN apt-get -y -qq install emacs
 RUN git clone https://github.com/val314159/raml-python
 COPY app.py app.py
+COPY data/* ./
 EXPOSE 8080
 CMD python app.py
