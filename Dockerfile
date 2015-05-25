@@ -11,11 +11,8 @@ RUN cd /opt && \
   rm -fr /opt/node-v0.10.28-linux-x64.tar.gz
 WORKDIR /root
 #RUN npm install raml-python -g
-#RUN apt-get -y -qq install emacs
 RUN git clone https://github.com/val314159/raml-python
 WORKDIR /root/raml-python
-RUN git pull
-RUN git checkout feature/tut1
 RUN git pull
 RUN npm install . -g
 WORKDIR /root
