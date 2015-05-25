@@ -1,5 +1,14 @@
 #%RAML 0.8
 ---
 title: simple API
-/x/y/z:
+/hello/world:
   get:
+/check/in:
+  get:
+    queryParameters:
+      name:
+        type: string
+      lat:
+        type: number
+      long:
+        type: number
