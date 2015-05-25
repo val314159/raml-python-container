@@ -1,5 +1,5 @@
 
-from simplex.rpc_requests import RequestsAPI
+from simple.rpc_requests import RequestsAPI
 
 api = RequestsAPI()
 api.prefixUri = 'http://localhost:8080'
