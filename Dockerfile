@@ -1,7 +1,7 @@
 FROM ubuntu
 MAINTAINER Joel Ward <jmward@gmail.com>
 RUN apt-get -y update
-RUN apt-get -y -qq install python wget git python-bottle emacs python-gevent
+RUN apt-get -y install python wget git python-bottle emacs python-gevent
 RUN cd /opt && \
   wget http://nodejs.org/dist/v0.10.28/node-v0.10.28-linux-x64.tar.gz && \
   tar -xvf node-v0.10.28-linux-x64.tar.gz && \
